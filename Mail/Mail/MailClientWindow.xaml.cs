@@ -21,12 +21,21 @@ namespace Mail
     public partial class MailClientWindow : Window
     {
         private CommonFolderCollection folders = ImapHelper.GetFolders();
+        public static MailClientWindow mailClientWindow;
+        MessageCollection messages;
         public MailClientWindow()
         {
             InitializeComponent();
             foreach (var item in folders) 
             {
-                FolderList.ItemsSource = item.Name;
+                if (item.Name == "INBOX")
+                {
+                    FolderList.Items.Add("Входящие");
+                }
+                else
+                {
+                    FolderList.Items.Add(item.Name);
+                }
             }
         }
 
@@ -39,7 +48,30 @@ namespace Mail
         private void FolderList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string folder;
+            string inbox = "INBOX";
             folder = FolderList.SelectedItem.ToString();
+            if (folder == "Входящие")
+            {
+                messages = ImapHelper.GetMessagesForFolder(inbox);
+            }
+            Task.Run(() =>
+            {
+                 messages = ImapHelper.GetMessagesForFolder(folder);
+            });
+            MessageList.Items.Clear();
+            foreach(var message in messages)
+            {
+                //Добавляем в листвью
+                MessageList.Items.Add(message.Subject);
+            }
+        }
+
+        private void Grid_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            //if (Mouse.LeftButton == MouseButtonState.Pressed)
+            //{
+            //    MailClientWindow.mailClientWindow.DragMove();
+            //}
         }
     }
 }

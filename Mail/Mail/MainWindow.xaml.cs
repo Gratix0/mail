@@ -99,13 +99,14 @@ namespace Mail
             {
 
                 ImapHelper.Initialize((MailComboBox.SelectedItem as ComboBoxItem).Tag.ToString());
-                if (ImapHelper.Login(MailComboBox.Text, PasswordTextBox.Text))
+                if (ImapHelper.Login(MailTextBox.Text, PasswordTextBox.Password))
                 {
                     //Переход на новое окно
+                    window.Hide();
                     MailClientWindow mailClientWindow = new MailClientWindow();
                     mailClientWindow.ShowDialog();
-                    window.Hide();
-                    Obosrams obosrams = new Obosrams("Суксес");
+
+
                 }
                 else
                 {
@@ -114,7 +115,7 @@ namespace Mail
             }
             catch (Exception ex)
             {
-                Obosrams obosrams = new Obosrams("Данные вводи");
+                Obosrams obosrams = new Obosrams("Обосрамс");
                 obosrams.ShowDialog();
             }
         }
