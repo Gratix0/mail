@@ -18,26 +18,22 @@ namespace Mail
     /// <summary>
     /// Логика взаимодействия для MailClientWindow.xaml
     /// </summary>
+    /// 
     public partial class MailClientWindow : Window
     {
         private CommonFolderCollection folders = ImapHelper.GetFolders();
         public static MailClientWindow mailClientWindow;
+        string folder;
         MessageCollection messages;
         public MailClientWindow()
         {
             InitializeComponent();
             foreach (var item in folders) 
             {
-                if (item.Name == "INBOX")
-                {
-                    FolderList.Items.Add("Входящие");
-                }
-                else
-                {
-                    FolderList.Items.Add(item.Name);
-                }
+                  FolderList.Items.Add(item.Name);
             }
         }
+
 
         public void Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -47,22 +43,27 @@ namespace Mail
 
         private void FolderList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string folder;
-            string inbox = "INBOX";
-            folder = FolderList.SelectedItem.ToString();
-            if (folder == "Входящие")
-            {
-                messages = ImapHelper.GetMessagesForFolder(inbox);
-            }
-            Task.Run(() =>
-            {
-                 messages = ImapHelper.GetMessagesForFolder(folder);
-            });
             MessageList.Items.Clear();
-            foreach(var message in messages)
+            folder = FolderList.SelectedItem.ToString();
+            messages = ImapHelper.GetMessagesForFolder(folder);
+
+            AddListView(messages);
+        }
+
+        private void AddListView(MessageCollection messages)
+        {
+            foreach (var mes in messages)
             {
                 //Добавляем в листвью
-                MessageList.Items.Add(message.Subject);
+                if (mes.Subject == " " || mes.Subject == "" || mes.Subject == null)
+                {
+                    mes.Subject = "Без темы";
+                    MessageList.Items.Add(mes.Subject);
+                }
+                else
+                {
+                    MessageList.Items.Add(mes.Subject);
+                }
             }
         }
 
@@ -72,6 +73,11 @@ namespace Mail
             //{
             //    MailClientWindow.mailClientWindow.DragMove();
             //}
+        }
+
+        private void MessageList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -18,7 +18,7 @@
         </Rectangle>
         <StackPanel Width="2" Background="#FF414141" Margin="269,30,529,30" />
         <ListView x:Name="FolderList" Margin="43,30,536,30" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141"/>
-        <ListView x:Name="MessageList" Margin="284,46,47,46" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141"/>
+        <ListView x:Name="MessageList" Margin="284,46,47,46" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141" SelectionChanged="MessageList_SelectionChanged"/>
 
     </Grid>
 </Window>
