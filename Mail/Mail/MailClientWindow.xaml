@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Mail"
+        xmlns:local="clr-namespace:Mail" 
         mc:Ignorable="d"
         Title="MailClientWindow" Height="450" Width="800" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#242424" MouseDown="Grid_MouseDown_1">
@@ -17,7 +17,15 @@
             </Rectangle.Fill>
         </Rectangle>
         <StackPanel Width="2" Background="#FF414141" Margin="269,30,529,30" />
-        <ListView x:Name="FolderList" Margin="43,30,536,30" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141"/>
+        <ListView x:Name="FolderList" Margin="43,30,536,30" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="SendMessage" Click="MenuItem_Click_1" />
+                    <MenuItem Header="Message" Click="MenuItem_Click" />
+                </ContextMenu>
+            </ListView.ContextMenu>
+
+        </ListView>
         <ListView x:Name="MessageList" Margin="284,46,47,46" SelectionChanged="MessageList_SelectionChanged" Foreground="#FF414141"/>
 
     </Grid>

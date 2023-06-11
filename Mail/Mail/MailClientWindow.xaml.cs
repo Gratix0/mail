@@ -75,11 +75,25 @@ namespace Mail
             //}
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Answer answer = new Answer();
+            answer.ShowDialog();
+        }
+
         private void MessageList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedSubject = MessageList.SelectedItem.ToString();
+            
             SelectedMessage selectedMessage = new SelectedMessage(messages, selectedSubject);
             selectedMessage.ShowDialog();
+
+            ContextMenu.Items.Add("");
 
         }
     }

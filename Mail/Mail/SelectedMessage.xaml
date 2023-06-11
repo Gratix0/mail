@@ -5,21 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
-        Title="Message" Height="350" Width="600" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#242424" MouseDown="Grid_MouseDown_1">
-        <StackPanel Background="#242424" Height="25" VerticalAlignment="Top" ></StackPanel>
-        <Button x:Name="Exit"  Click="Exit_Click" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="#FF414141" Content="X" FontSize="10" Height="25"></Button>
+        Title="Message" Height="350" Width="600" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#242424" Margin="0,0,0,-10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"></RowDefinition>
+            <RowDefinition Height="52*"></RowDefinition>
+            <RowDefinition Height="53*"></RowDefinition>
+            <RowDefinition Height="101*"></RowDefinition>
+            <RowDefinition Height="117*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#242424" Height="24" VerticalAlignment="Center" ></StackPanel>
+        <Button x:Name="Exit" HorizontalAlignment="Right" Click="Exit_Click" VerticalAlignment="Top" BorderBrush="#FF414141" Content="X" FontSize="10" Height="24" Margin="562,0,0,0" Width="38"></Button>
         <Label x:Name="label" Content="Your mail client" Margin="10,0,0,9" Width="245" HorizontalAlignment="Left" Padding="5,2" Foreground="#FFB2B2B2"/>
 
-        <Rectangle Height="400" Margin="30,25,30,25" RadiusY="20" RadiusX="20">
+        <Rectangle Margin="30,6,30,10" RadiusY="20" RadiusX="20" Grid.RowSpan="4" Grid.Row="1">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FFFFC107"/>
             </Rectangle.Fill>
         </Rectangle>
-        <TextBlock x:Name="TitleMessage" Height="30" Width="150" Margin="225,40,225,280" VerticalAlignment="Center"></TextBlock>
-        <TextBlock x:Name="FromAdress" Height="30" Width="150" Margin="62,74,388,0" VerticalAlignment="Top"></TextBlock>
-        <RichTextBox x:Name="Body" Height="200" Width="480" Margin="57,109,54,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 
+        <TextBlock x:Name="TitleMessage" Margin="85,19,105,0" TextAlignment="Center" FontSize="15" Foreground="#242424" Grid.Row="1"/>
+        <TextBlock x:Name="FromAdress" Margin="85,10,337,17" FontSize="10" Grid.Row="2"/>
 
+        <Rectangle Height="1" Grid.Row="2" Margin="0,42,0,0" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" HorizontalAlignment="Center" Width="430" >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#242424"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="Body" Height="159" Width="430" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="2" Margin="0,49,0,0" Grid.RowSpan="3" />
+        <Button x:Name="AnswerBtn" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Resource name: MaterialDesignRaisedButton" Content="Answer" Foreground="#FFB2B2B2" FontSize="15" Grid.Row="4" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Margin="240,59,240,26" Background="#FF242424" Click="AnswerBtn_Click"/>
     </Grid>
 </Window>
