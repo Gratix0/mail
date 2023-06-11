@@ -1,11 +1,11 @@
-﻿<Window x:Class="Mail.MailClientWindow"
+﻿<Window x:Class="Mail.SelectedMessage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
-        Title="MailClientWindow" Height="450" Width="800" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Message" Height="350" Width="600" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#242424" MouseDown="Grid_MouseDown_1">
         <StackPanel Background="#242424" Height="25" VerticalAlignment="Top" ></StackPanel>
         <Button x:Name="Exit"  Click="Exit_Click" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="#FF414141" Content="X" FontSize="10" Height="25"></Button>
@@ -16,9 +16,10 @@
                 <SolidColorBrush Color="#FFFFC107"/>
             </Rectangle.Fill>
         </Rectangle>
-        <StackPanel Width="2" Background="#FF414141" Margin="269,30,529,30" />
-        <ListView x:Name="FolderList" Margin="43,30,536,30" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141"/>
-        <ListView x:Name="MessageList" Margin="284,46,47,46" SelectionChanged="MessageList_SelectionChanged" Foreground="#FF414141"/>
+        <TextBlock x:Name="TitleMessage" Height="30" Width="150" Margin="225,40,225,280" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="FromAdress" Height="30" Width="150" Margin="62,74,388,0" VerticalAlignment="Top"></TextBlock>
+        <RichTextBox x:Name="Body" Height="200" Width="480" Margin="57,109,54,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
 
     </Grid>
 </Window>

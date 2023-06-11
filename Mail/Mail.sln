@@ -4,6 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mail", "Mail\Mail.csproj", "{0E0E444B-8729-4157-8372-7CA507191B34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B4A99C7-A8B6-4D65-B03D-331213A60302} = {7B4A99C7-A8B6-4D65-B03D-331213A60302}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{69E1C5C9-E78B-471C-B8B8-453D303BCD95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlRtf", "..\..\..\..\Desktop\HtmlRtf\HtmlRtf\HtmlRtf.csproj", "{7B4A99C7-A8B6-4D65-B03D-331213A60302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{0E0E444B-8729-4157-8372-7CA507191B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E0E444B-8729-4157-8372-7CA507191B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E0E444B-8729-4157-8372-7CA507191B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4A99C7-A8B6-4D65-B03D-331213A60302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4A99C7-A8B6-4D65-B03D-331213A60302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4A99C7-A8B6-4D65-B03D-331213A60302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4A99C7-A8B6-4D65-B03D-331213A60302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

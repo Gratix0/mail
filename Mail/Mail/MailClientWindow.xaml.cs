@@ -23,7 +23,7 @@ namespace Mail
     {
         private CommonFolderCollection folders = ImapHelper.GetFolders();
         public static MailClientWindow mailClientWindow;
-        string folder;
+        string folder, selectedSubject;
         MessageCollection messages;
         public MailClientWindow()
         {
@@ -77,6 +77,9 @@ namespace Mail
 
         private void MessageList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            selectedSubject = MessageList.SelectedItem.ToString();
+            SelectedMessage selectedMessage = new SelectedMessage(messages, selectedSubject);
+            selectedMessage.ShowDialog();
 
         }
     }
