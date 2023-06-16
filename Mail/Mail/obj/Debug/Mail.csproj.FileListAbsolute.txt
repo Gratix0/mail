@@ -103,3 +103,7 @@ C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\Spire.Pdf.xml
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\SelectedMessage.baml
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Answer.g.cs
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Answer.baml
+C:\Users\Александр\Documents\GitHub\mail\Mail\Mail\obj\Debug\Answer.g.cs
+C:\Users\Александр\Documents\GitHub\mail\Mail\Mail\obj\Debug\SelectedMessage.g.cs
+C:\Users\Александр\Documents\GitHub\mail\Mail\Mail\obj\Debug\Answer.baml
+C:\Users\Александр\Documents\GitHub\mail\Mail\Mail\obj\Debug\SelectedMessage.baml

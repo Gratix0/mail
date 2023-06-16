@@ -35,7 +35,7 @@ namespace Mail
         {
             MailMessage m = new MailMessage("oganisyan.sanya1@mail.ru", "isip_a.s.oganisyan@mpt.ru", TitleMessage.Text, Body.Text);
             m.IsBodyHtml = false;
-            SmtpClient smtpClient = new SmtpClient("imap.mail.ru");
+            SmtpClient smtpClient = new SmtpClient("smtp.mail.ru", 587);
             smtpClient.Credentials = new NetworkCredential("oganisyan.sanya1@mail.ru", "S01Lwp6NH3zgaEU0yvJZ");
             smtpClient.EnableSsl = true;
             smtpClient.Send(m);
