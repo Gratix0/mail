@@ -1,4 +1,5 @@
-﻿using ImapX.Collections;
+﻿using ImapX;
+using ImapX.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,11 @@ namespace Mail
             }
         }
 
+        /// <summary>
+        /// HTML конвертр
+        /// </summary>
+        /// <param name="html"></param>
+        /// <returns></returns>
         private static string HtmlToPlainText(string html)
         {
             const string tagWhiteSpace = @"(>|$)(\W|\n|\r)+<";//matches one or more (white space or line breaks) between '>' and '<'
@@ -59,9 +65,11 @@ namespace Mail
 
             return text;
         }
+
         public void Exit_Click(object sender, RoutedEventArgs e)
         {
-
+            Window currentWindow = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
+            currentWindow.Close();
         }
 
         private void AnswerBtn_Click(object sender, RoutedEventArgs e)

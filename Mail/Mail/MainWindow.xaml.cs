@@ -33,20 +33,20 @@ namespace Mail
          
         }
 
+        
         private void Drag(object sender, DragEventArgs e)
         {
+            // Возможность перемещения окна Драгмувом
             if (Mouse.LeftButton == MouseButtonState.Pressed)
             {
                 MainWindow.window.DragMove();
             }
         }
-
-        bool MainWindowState = false;                               //Статус размера окна
+        bool MainWindowState = false;
         /// <summary>
         /// Кнопка "Закрыть окно"
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         public void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application app = Application.Current;
@@ -54,20 +54,16 @@ namespace Mail
         }
 
         /// <summary>
-        /// Перемещение окна приложения мышью
+        /// Перемещение окна приложения мышью в зоне тайтлбара
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
         }
 
         /// <summary>
-        /// Разворачивание/нормализация окна.
+        /// Разворачивание/нормализация окна. (Вырезанная функция)
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Expand_Click(object sender, RoutedEventArgs e)
         {
             if (!MainWindowState)
@@ -86,8 +82,7 @@ namespace Mail
         /// <summary>
         /// Кнопка Свернуть
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void Turn_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.WindowState = WindowState.Minimized;
@@ -97,7 +92,6 @@ namespace Mail
         {
             try
             {
-
                 ImapHelper.Initialize((MailComboBox.SelectedItem as ComboBoxItem).Tag.ToString());
                 if (ImapHelper.Login(MailTextBox.Text, PasswordTextBox.Password))
                 {
@@ -105,17 +99,15 @@ namespace Mail
                     window.Hide();
                     MailClientWindow mailClientWindow = new MailClientWindow();
                     mailClientWindow.ShowDialog();
-
-
                 }
                 else
                 {
-                    Obosrams obosrams = new Obosrams("Данные вводи");
+                    Obosrams obosrams = new Obosrams("Данные не введены");
                 }
             }
             catch (Exception ex)
             {
-                Obosrams obosrams = new Obosrams("Обосрамс");
+                Obosrams obosrams = new Obosrams("Некорректные данные");
                 obosrams.ShowDialog();
             }
         }

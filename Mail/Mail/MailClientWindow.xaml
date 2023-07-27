@@ -7,26 +7,58 @@
         mc:Ignorable="d"
         Title="MailClientWindow" Height="450" Width="800" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#242424" MouseDown="Grid_MouseDown_1">
-        <StackPanel Background="#242424" Height="25" VerticalAlignment="Top" ></StackPanel>
-        <Button x:Name="Exit"  Click="Exit_Click" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="#FF414141" Content="X" FontSize="10" Height="25"></Button>
-        <Label x:Name="label" Content="Your mail client" Margin="10,0,0,9" Width="245" HorizontalAlignment="Left" Padding="5,2" Foreground="#FFB2B2B2"/>
+        
+        <StackPanel Background="#242424"
+                    Height="25"
+                    VerticalAlignment="Top"></StackPanel>
+        
+        <Button x:Name="Exit"
+                Click="Exit_Click"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                BorderBrush="#FF414141"
+                Content="X"
+                FontSize="10"
+                Height="25"></Button>
+        
+        <Label x:Name="label"
+               Content="Your mail client"
+               Margin="10,0,0,9"
+               Width="245"
+               HorizontalAlignment="Left"
+               Padding="5,2"
+               Foreground="#FFB2B2B2"/>
 
-        <Rectangle Height="400" Margin="30,25,30,25" RadiusY="20" RadiusX="20">
-            <Rectangle.Fill>
-                <SolidColorBrush Color="#FFFFC107"/>
-            </Rectangle.Fill>
+        <Rectangle Height="400"
+                   Margin="30,25,30,25"
+                   RadiusY="20" RadiusX="20">
+
+                   <Rectangle.Fill>
+                        <SolidColorBrush Color="#FFFFC107"/>
+                   </Rectangle.Fill>
         </Rectangle>
-        <StackPanel Width="2" Background="#FF414141" Margin="269,30,529,30" />
-        <ListView x:Name="FolderList" Margin="43,30,536,30" SelectionChanged="FolderList_SelectionChanged" Foreground="#FF414141">
+        
+        <StackPanel Width="2"
+                    Background="#FF414141"
+                    Margin="269,30,529,30"/>
+
+        <ListView x:Name="FolderList"
+                  Margin="43,30,536,30" 
+                  SelectionChanged="FolderList_SelectionChanged"
+                  Foreground="#FF414141">
+
             <ListView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="SendMessage" Click="MenuItem_Click_1" />
-                    <MenuItem Header="Message" Click="MenuItem_Click" />
+                    <MenuItem Header="Message"/>
                 </ContextMenu>
             </ListView.ContextMenu>
 
         </ListView>
-        <ListView x:Name="MessageList" Margin="284,46,47,46" SelectionChanged="MessageList_SelectionChanged" Foreground="#FF414141"/>
 
+        <ListView x:Name="MessageList"
+                  Margin="284,46,47,46"
+                  SelectionChanged="MessageList_SelectionChanged"
+                  Foreground="#FF414141"/>
     </Grid>
 </Window>

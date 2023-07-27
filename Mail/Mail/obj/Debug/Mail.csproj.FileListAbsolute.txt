@@ -92,14 +92,6 @@ C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Mail.csproj.GenerateRe
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Mail.csproj.CoreCompileInputs.cache
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Mail.csproj.CopyComplete
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\SelectedMessage.g.cs
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\HtmlRtf.exe
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\Spire.Doc.dll
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\Spire.Pdf.dll
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\Microsoft.mshtml.dll
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\HtmlRtf.pdb
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\HtmlRtf.exe.config
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\Spire.Doc.xml
-C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\bin\Debug\Spire.Pdf.xml
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\SelectedMessage.baml
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Answer.g.cs
 C:\Users\Gratix\Documents\GitHub\mail\Mail\Mail\obj\Debug\Answer.baml
