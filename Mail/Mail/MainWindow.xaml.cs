@@ -88,6 +88,9 @@ namespace Mail
             Application.Current.MainWindow.WindowState = WindowState.Minimized;
         }
 
+        /// <summary>
+        /// Обработка нажатия на LoginButton. Попытка вбить данные в ImapHelper. В случае ошибки выводим её в отдельное всплывающее окно
+        /// </summary>
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -102,13 +105,13 @@ namespace Mail
                 }
                 else
                 {
-                    Obosrams obosrams = new Obosrams("Подключение не удалось", "Ошибка");
+                    ExeptionWindow obosrams = new ExeptionWindow("Подключение не удалось", "Ошибка");
                     obosrams.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
-                Obosrams obosrams = new Obosrams("Поля пустуют", Convert.ToString(ex));
+                ExeptionWindow obosrams = new ExeptionWindow("Поля пустуют", Convert.ToString(ex));
                 obosrams.ShowDialog();
             }
         }
@@ -140,8 +143,7 @@ namespace Mail
         {
             loggedUser.Email = u;
             loggedUser.Pass = p;
-            if (client.Login(u, p)) { return client.Login(u, p); }
-            else { return false; }
+            return client.Login(u, p);
 
         }
         public static void Logout()

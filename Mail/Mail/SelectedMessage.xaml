@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
-        Title="Message" Height="350" Width="600" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
+        Title="Message"
+        Height="350"
+        Width="600"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#242424" Margin="0,0,0,-10">
         
         <Grid.RowDefinitions>

@@ -1,12 +1,19 @@
-﻿<Window x:Class="Mail.Obosrams"
+﻿<Window x:Class="Mail.ExeptionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
-        Title="Obosrams" Height="150" Width="300" AllowsTransparency="True"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Exeption" 
+        Height="150"
+        Width="300"
+        AllowsTransparency="True"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    
     <Grid Background="#242424" MouseDown="Grid_MouseDown">
 
         <StackPanel Background="#FFFFC107"

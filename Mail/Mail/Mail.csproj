@@ -100,7 +100,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Obosrams.xaml">
+    <Page Include="ExeptionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,8 +110,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Obosrams.xaml.cs">
-      <DependentUpon>Obosrams.xaml</DependentUpon>
+    <Compile Include="ExeptionWindow.xaml.cs">
+      <DependentUpon>ExeptionWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

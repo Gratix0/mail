@@ -5,7 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
-Title="Message" Height="350" Width="600" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
+        Title="Message"
+        Height="350" 
+        Width="600"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        WindowStartupLocation="CenterScreen">
+    
     <Grid Background="#242424" Margin="0,0,0,-10">
         <Grid.RowDefinitions>
             <RowDefinition Height="27*"></RowDefinition>
@@ -14,6 +21,7 @@ Title="Message" Height="350" Width="600" xmlns:materialDesign="http://materialde
             <RowDefinition Height="101*"></RowDefinition>
             <RowDefinition Height="117*"></RowDefinition>
         </Grid.RowDefinitions>
+        
         <StackPanel Background="#242424" Height="24" VerticalAlignment="Center" ></StackPanel>
         <Button x:Name="Exit" HorizontalAlignment="Right" Click="Exit_Click" VerticalAlignment="Top" BorderBrush="#FF414141" Content="X" FontSize="10" Height="24" Margin="562,0,0,0" Width="38"></Button>
         <Label x:Name="label" Content="Your mail client" Margin="10,0,0,9" Width="245" HorizontalAlignment="Left" Padding="5,2" Foreground="#FFB2B2B2"/>

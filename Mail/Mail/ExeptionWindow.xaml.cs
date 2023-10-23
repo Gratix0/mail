@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 namespace Mail
 {
     /// <summary>
-    /// Логика взаимодействия для Obosrams.xaml
+    /// Логика взаимодействия для ExeptionWindow.xaml
     /// </summary>
-    public partial class Obosrams : Window
+    public partial class ExeptionWindow : Window
     {
-        public static Obosrams obosrams;
-        public Obosrams(string TextForMessageBox, string ex)
+        public static ExeptionWindow obosrams;
+        public ExeptionWindow(string TextForMessageBox, string ex)
         {
             InitializeComponent();
             obosrams = this;
@@ -38,7 +38,7 @@ namespace Mail
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed)
             {
-                Obosrams.obosrams.DragMove();
+                ExeptionWindow.obosrams.DragMove();
             }
         }
     }

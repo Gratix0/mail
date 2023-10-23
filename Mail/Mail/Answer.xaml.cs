@@ -31,6 +31,10 @@ namespace Mail
             this.Owner.Hide();
         }
 
+        /// <summary>
+        /// Процесс заполнения даных и отправки сообщения по Smtp. Для примера вбил на свою почту
+        /// </summary>
+ 
         private void SendBtn_Click(object sender, RoutedEventArgs e)
         {
             try
