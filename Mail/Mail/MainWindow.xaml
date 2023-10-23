@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow"
+        Height="450"  
+        Width="800"
         Background="#FFFFC107"
-
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    
     <Grid MouseDown="TitleBar_MouseLeftButtonDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="171*"></ColumnDefinition>

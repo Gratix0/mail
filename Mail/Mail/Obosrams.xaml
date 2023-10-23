@@ -8,12 +8,12 @@
         Title="Obosrams" Height="150" Width="300" AllowsTransparency="True"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#242424" MouseDown="Grid_MouseDown">
-        
+
         <StackPanel Background="#FFFFC107"
                     Height="25"
                     VerticalAlignment="Top"
                     Grid.ColumnSpan="5"></StackPanel>
-        
+
         <Button x:Name="Exit"
                 Click="Exit_Click"
                 HorizontalAlignment="Right"
@@ -23,29 +23,21 @@
                 Content="X"
                 FontSize="10"
                 Height="25"></Button>
-        
-        <Label x:Name="label"
+
+        <Label x:Name="LabelText"
                Content="Ошибка"
-               Margin="10,0,0,9"
-               Width="245"
+               Margin="10,0,0,125"
+               Width="114"
                FontSize="13"
                HorizontalAlignment="Left"
                Padding="5,2"
-               Grid.ColumnSpan="2"
                Foreground="#242424"/>
-        
+
         <TextBlock x:Name="TextBox" 
                    Text="Пример сообщения"
                    TextAlignment="Center"
                    VerticalAlignment="Center" 
-                   FontSize="18"
-                   Foreground="#FFCECECE"
-                   Margin="-10,0,10,0"></TextBlock>
-        
-        <Button x:Name="Button_Copy"
-                Click="Exit_Click"
-                Content="ОК"
-                Width="50"
-                Margin="10,108,240,10"/>
+                   FontSize="22"
+                   Foreground="#FFCECECE"/>
     </Grid>
 </Window>

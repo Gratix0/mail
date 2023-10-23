@@ -20,11 +20,12 @@ namespace Mail
     public partial class Obosrams : Window
     {
         public static Obosrams obosrams;
-        public Obosrams(string TextForMessageBox)
+        public Obosrams(string TextForMessageBox, string ex)
         {
             InitializeComponent();
             obosrams = this;
             TextBox.Text = TextForMessageBox;
+            LabelText.Content = ex;
         }
 
         public void Exit_Click(object sender, RoutedEventArgs e)

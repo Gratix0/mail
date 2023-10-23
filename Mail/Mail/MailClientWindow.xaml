@@ -5,22 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mail" 
         mc:Ignorable="d"
-        Title="MailClientWindow" Height="450" Width="800" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MailClientWindow" Height="450" Width="800" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#242424" MouseDown="Grid_MouseDown_1">
-        
+
         <StackPanel Background="#242424"
                     Height="25"
                     VerticalAlignment="Top"></StackPanel>
-        
-        <Button x:Name="Exit"
+
+        <Button x:Name="Exit" 
                 Click="Exit_Click"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 BorderBrush="#FF414141"
                 Content="X"
                 FontSize="10"
-                Height="25"></Button>
-        
+                Height="25" RenderTransformOrigin="0.33,0.488" Margin="0,1,2,0"></Button>
+
         <Label x:Name="label"
                Content="Your mail client"
                Margin="10,0,0,9"
@@ -33,11 +35,11 @@
                    Margin="30,25,30,25"
                    RadiusY="20" RadiusX="20">
 
-                   <Rectangle.Fill>
-                        <SolidColorBrush Color="#FFFFC107"/>
-                   </Rectangle.Fill>
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFFFC107"/>
+            </Rectangle.Fill>
         </Rectangle>
-        
+
         <StackPanel Width="2"
                     Background="#FF414141"
                     Margin="269,30,529,30"/>

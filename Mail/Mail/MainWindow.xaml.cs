@@ -102,12 +102,13 @@ namespace Mail
                 }
                 else
                 {
-                    Obosrams obosrams = new Obosrams("Данные не введены");
+                    Obosrams obosrams = new Obosrams("Подключение не удалось", "Ошибка");
+                    obosrams.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
-                Obosrams obosrams = new Obosrams("Некорректные данные");
+                Obosrams obosrams = new Obosrams("Поля пустуют", Convert.ToString(ex));
                 obosrams.ShowDialog();
             }
         }
@@ -139,7 +140,8 @@ namespace Mail
         {
             loggedUser.Email = u;
             loggedUser.Pass = p;
-            return client.Login(u, p);
+            if (client.Login(u, p)) { return client.Login(u, p); }
+            else { return false; }
 
         }
         public static void Logout()
